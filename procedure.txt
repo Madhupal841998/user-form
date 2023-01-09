@@ -1,0 +1,9 @@
+DELIMITER //
+
+CREATE PROCEDURE insertAll()
+BEGIN
+	INSERT INTO address (`addressId`, `address`) VALUES ( addressId, address);
+    INSERT INTO users (`id`, `name`, `addressId`) VALUES ( id, name, addressId);
+END //
+
+DELIMITER ;
