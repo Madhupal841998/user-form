@@ -34,7 +34,7 @@ app.post('/user', (req, res) => {
     const q1 = "INSERT INTO address (`addressId`, `address`) VALUES ( ? , ?)";
 
     con.query(q1,[AddressId, Address], (err, doc) => {
-        if (!err) { res.status(500); }
+        if (!err) { res.status(200); }
         else { console.log('Error in User insert :' + JSON.stringify(err, undefined, 2)); }
     });
   
@@ -42,7 +42,7 @@ app.post('/user', (req, res) => {
     
 
     con.query(q2,[userid, username, userAddressId], (err, doc) => {
-        if (!err) { res.status(500); }
+        if (!err) { res.status(200); }
         else { console.log('Error in User insert :' + JSON.stringify(err, undefined, 2)); }
     });
 });
